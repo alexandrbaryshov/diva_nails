@@ -1,4 +1,4 @@
-﻿import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 import { encode } from "uqr";
 
 // layout.ts без импортов: Node читает его напрямую (динамически — tsc не требует расширения .ts)
@@ -65,7 +65,7 @@ test.describe("карточка-бриф", () => {
     await page.getByRole("region", { name: "Цвет", exact: true }).getByRole("button", { name: "DN 29 · Клюква" }).click();
     await openCard(page);
     const hash = await page.evaluate(() => location.hash);
-    const url = `https://alexandrbaryshov.github.io/diva-nails/d/${hash}`;
+    const url = `https://alexandrbaryshov.github.io/diva_nails/d/${hash}`;
     expect(url.length).toBeLessThanOrEqual(120);
     const matrix = encode(url, { ecc: "M", border: 0 }).data;
     const g = qrGeometry(matrix.length);

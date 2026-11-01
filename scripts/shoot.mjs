@@ -4,7 +4,7 @@
 //   hero-repro.png  — 390×844, только первый экран
 //   hero-mockup.png — первый экран в пикселях утверждённого макета, 1536×2752 (только с --mockup)
 //
-//   node scripts/shoot.mjs [--out=.impeccable/review] [--url=http://…/diva-nails/] [--no-build]
+//   node scripts/shoot.mjs [--out=.impeccable/review] [--url=http://…/diva_nails/] [--no-build]
 //                          [--hero=390x844] [--dpr=2] [--path=./]
 //                          [--only=desktop,mobile,hero,mockup]   что снимать (по умолчанию desktop, mobile, hero)
 //                          [--mockup]                            добавить hero-mockup.png (см. scripts/hands/hero-shot.mjs)

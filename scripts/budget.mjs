@@ -7,7 +7,7 @@ import { gzipSync } from "node:zlib";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = join(ROOT, "dist");
-const BASE = "/diva-nails/";
+const BASE = "/diva_nails/";
 const LIMITS = {
   firstScreenJsGzip: 90 * 1024,
 };

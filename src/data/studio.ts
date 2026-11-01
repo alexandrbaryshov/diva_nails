@@ -33,10 +33,10 @@ export interface Studio {
   yclientsUrl: string | null;
   metrikaId: number | null;
   logo: string | null;
-  siteUrl: "https://alexandrbaryshov.github.io/diva-nails/";
+  siteUrl: "https://alexandrbaryshov.github.io/diva_nails/";
 }
 
 export const STUDIO: Studio = studio as unknown as Studio;
 
-/** Адрес сайта на GitHub Pages; base сборки — /diva-nails/. */
+/** Адрес сайта на GitHub Pages; base сборки — /diva_nails/. */
 export const SITE_URL: Studio["siteUrl"] = STUDIO.siteUrl;

@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
 export const KIT_ORIGIN = "http://hand-kit.test";
-export const KIT_URL = `${KIT_ORIGIN}/diva-nails/`;
+export const KIT_URL = `${KIT_ORIGIN}/diva_nails/`;
 
 const ENTRY = `
 import { h, render } from "preact";
@@ -31,7 +31,7 @@ export async function bundleHandKit() {
   const res = await build({
     root: ROOT,
     configFile: false,
-    base: "/diva-nails/",
+    base: "/diva_nails/",
     logLevel: "error",
     publicDir: false,
     plugins: [
@@ -58,16 +58,16 @@ export async function bundleHandKit() {
   return cached;
 }
 
-/** Подключить набор к странице Playwright: KIT_URL отдаёт страницу, /diva-nails/hands/* — файлы рук. */
+/** Подключить набор к странице Playwright: KIT_URL отдаёт страницу, /diva_nails/hands/* — файлы рук. */
 export async function routeHandKit(page, { bodyCss = "" } = {}) {
   const { js, css } = await bundleHandKit();
   const html = `<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>${css}
 html,body{margin:0;background:#f6f0ea;font:14px/1.3 system-ui,sans-serif;color:#3b2a26}${bodyCss}</style></head>
-<body><div id="root"></div><script type="module" src="/diva-nails/kit.js"></script></body></html>`;
+<body><div id="root"></div><script type="module" src="/diva_nails/kit.js"></script></body></html>`;
   await page.route(`${KIT_ORIGIN}/**`, (route) => {
     const path = new URL(route.request().url()).pathname;
-    if (path === "/diva-nails/" || path === "/diva-nails/index.html") return route.fulfill({ contentType: "text/html", body: html });
-    if (path === "/diva-nails/kit.js") return route.fulfill({ contentType: "text/javascript", body: js });
+    if (path === "/diva_nails/" || path === "/diva_nails/index.html") return route.fulfill({ contentType: "text/html", body: html });
+    if (path === "/diva_nails/kit.js") return route.fulfill({ contentType: "text/javascript", body: js });
     const m = /^\/diva-nails\/hands\/([a-z]+-\d\.svg)$/.exec(path);
     if (m) return route.fulfill({ contentType: "image/svg+xml", body: readFileSync(join(ROOT, "public", "hands", m[1])) });
     return route.fulfill({ status: 404, body: "" });

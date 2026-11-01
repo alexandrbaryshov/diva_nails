@@ -5,9 +5,9 @@ import preact from "@preact/preset-vite";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 
-// Адрес сайта на GitHub Pages: https://alexandrbaryshov.github.io/diva-nails/
+// Адрес сайта на GitHub Pages: https://alexandrbaryshov.github.io/diva_nails/
 // (тот же адрес — data/studio.json → siteUrl).
-export const BASE = "/diva-nails/";
+export const BASE = "/diva_nails/";
 
 export default defineConfig({
   base: BASE,

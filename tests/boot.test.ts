@@ -7,25 +7,25 @@ import { MONTH_PRESET, PRESETS } from "../src/data/designs";
 let dispose: () => void = () => {};
 afterEach(() => {
   dispose();
-  history.replaceState(null, "", "/diva-nails/");
+  history.replaceState(null, "", "/diva_nails/");
 });
 
 describe("старт конструктора из адреса", () => {
   it("ссылка открывает тот же дизайн, правки сразу пишутся в адрес", () => {
     const d = PRESETS[3].design;
-    history.replaceState(null, "", `/diva-nails/d/#d=${encodeDesign(d)}`);
+    history.replaceState(null, "", `/diva_nails/d/#d=${encodeDesign(d)}`);
     const s = createDesignStore(MONTH_PRESET.design);
     dispose = bootFromLocation(s, location);
     expect(s.design.value).toEqual(d);
     expect(linkNotice.value).toEqual([]);
 
     s.paint(1, "DN28");
-    expect(location.pathname).toBe("/diva-nails/d/");
+    expect(location.pathname).toBe("/diva_nails/d/");
     expect(location.hash).toBe(`#d=${encodeDesign(s.design.value)}`);
   });
 
   it("битая ссылка — дизайн месяца и пометка; адрес исправляется на дизайн месяца", () => {
-    history.replaceState(null, "", "/diva-nails/#d=garbage!");
+    history.replaceState(null, "", "/diva_nails/#d=garbage!");
     const s = createDesignStore(PRESETS[1].design);
     dispose = bootFromLocation(s, location);
     expect(s.design.value).toEqual(MONTH_PRESET.design);
@@ -34,7 +34,7 @@ describe("старт конструктора из адреса", () => {
   });
 
   it("без ссылки адрес не трогается, пока дизайн не изменился", () => {
-    history.replaceState(null, "", "/diva-nails/");
+    history.replaceState(null, "", "/diva_nails/");
     const s = createDesignStore(MONTH_PRESET.design);
     dispose = bootFromLocation(s, location);
     expect(location.hash).toBe("");

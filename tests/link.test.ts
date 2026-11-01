@@ -31,7 +31,7 @@ function otherVersion(code: string): string {
   return "A" + B64URL[(second & 0b001111) | 0b100000] + code.slice(2);
 }
 
-const SITE = "https://alexandrbaryshov.github.io/diva-nails/";
+const SITE = "https://alexandrbaryshov.github.io/diva_nails/";
 
 // Детерминированный генератор случайных чисел (mulberry32), чтобы падение воспроизводилось.
 function rng(seed: number): () => number {
@@ -157,11 +157,11 @@ describe("ссылка в адресе страницы", () => {
   });
 
   it("writeDesignToLocation пишет #d=… через replaceState, не засоряя историю", () => {
-    history.replaceState(null, "", "/diva-nails/?author=1");
+    history.replaceState(null, "", "/diva_nails/?author=1");
     const len = history.length;
     const d = PRESETS[2].design;
     writeDesignToLocation(d);
-    expect(location.pathname).toBe("/diva-nails/");
+    expect(location.pathname).toBe("/diva_nails/");
     expect(location.search).toBe("?author=1");
     expect(location.hash).toBe(`#d=${encodeDesign(d)}`);
     expect(history.length).toBe(len);

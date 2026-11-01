@@ -13,13 +13,13 @@ export default defineConfig({
   reporter: [["list"]],
   outputDir: "test-results",
   use: {
-    baseURL: `${ORIGIN}/diva-nails/`,
+    baseURL: `${ORIGIN}/diva_nails/`,
     trace: "retain-on-failure",
   },
   webServer: {
     // e2e идут против собранного dist/ через vite preview
     command: `npx vite build && npx vite preview --port ${PORT} --strictPort --host 127.0.0.1`,
-    url: `${ORIGIN}/diva-nails/`,
+    url: `${ORIGIN}/diva_nails/`,
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
   },

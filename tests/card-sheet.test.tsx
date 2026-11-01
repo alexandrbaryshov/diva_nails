@@ -6,7 +6,7 @@ import { BookingSheet } from "../src/booking/BookingSheet";
 
 afterEach(cleanup);
 
-const URL_ = "https://alexandrbaryshov.github.io/diva-nails/d/#d=ABC";
+const URL_ = "https://alexandrbaryshov.github.io/diva_nails/d/#d=ABC";
 const blob = new Blob(["x"], { type: "image/png" });
 
 function sheet(over: Partial<Parameters<typeof SaveSheet>[0]> = {}) {

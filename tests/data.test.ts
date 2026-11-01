@@ -123,7 +123,7 @@ describe("data/studio.json — только факты facts.md", () => {
     expect(decodeURIComponent(STUDIO.rating.url)).toContain("Diva Nails");
     expect(STUDIO.amenities).toEqual(["card", "wifi"]);
     expect(STUDIO.legal).toEqual({ form: "ИП", inn: "213006606123", ogrnip: "315213000010059", fullName: null });
-    expect(STUDIO.siteUrl).toBe("https://alexandrbaryshov.github.io/diva-nails/");
+    expect(STUDIO.siteUrl).toBe("https://alexandrbaryshov.github.io/diva_nails/");
   });
 
   it("неизвестное — null", () => {

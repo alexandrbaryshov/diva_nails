@@ -27,7 +27,7 @@ describe("JSON-LD NailSalon", () => {
       addressLocality: "Чебоксары",
       addressCountry: "RU",
     });
-    expect(ld.url).toBe("https://alexandrbaryshov.github.io/diva-nails/");
+    expect(ld.url).toBe("https://alexandrbaryshov.github.io/diva_nails/");
   });
 
   it("рейтинг 5.0 по 162 отзывам; часов и цен нет, пока студия их не прислала", () => {
@@ -38,7 +38,7 @@ describe("JSON-LD NailSalon", () => {
   });
 
   it("картинка и соцсети — абсолютные ссылки", () => {
-    expect(ld.image).toBe("https://alexandrbaryshov.github.io/diva-nails/og/main.png");
+    expect(ld.image).toBe("https://alexandrbaryshov.github.io/diva_nails/og/main.png");
     expect(ld.sameAs).toEqual(["https://t.me/divanail21", "https://vk.ru/diva_nail21"]);
   });
 

@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 
 // Поиск, превью в ссылках и Метрика — на настоящих движках, против собранного dist/.
 
-const SITE = "https://alexandrbaryshov.github.io/diva-nails/";
+const SITE = "https://alexandrbaryshov.github.io/diva_nails/";
 const TITLE = "Маникюр и педикюр в Чебоксарах — Diva Nails, пр. Ленина, 7";
 const CRANBERRY = "ASAOgAdAA6AB0ADoAA";
 

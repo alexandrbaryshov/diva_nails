@@ -36,7 +36,7 @@ describe("cardLines — что на каждом ногте", () => {
 
 describe("QR на карточке", () => {
   it("модули целыми пикселями и целиком в своём квадрате с полями", () => {
-    const url = "https://alexandrbaryshov.github.io/diva-nails/d/#d=AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB";
+    const url = "https://alexandrbaryshov.github.io/diva_nails/d/#d=AQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB";
     const m = qrMatrix(url);
     expect(m.length).toBe(m[0].length);
     const g = qrGeometry(m.length);

@@ -14,7 +14,7 @@ import { createDesignStore } from "../src/state/store";
 
 afterEach(cleanup);
 
-const URL_ = "https://alexandrbaryshov.github.io/diva-nails/d/#d=ABC";
+const URL_ = "https://alexandrbaryshov.github.io/diva_nails/d/#d=ABC";
 
 function allNails(d: Design, patch: Partial<Design["nails"][number]>): Design {
   return { ...d, nails: d.nails.map((n) => ({ ...n, ...patch })) as Design["nails"] };

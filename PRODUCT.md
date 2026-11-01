@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static site, no backend: Vite + TypeScript (from the brief). Framework delegated to the build — chosen at the start of development. Hosting: GitHub Pages at `https://alexandrbaryshov.github.io/diva-nails/`, published only on the owner's word.
+Static site, no backend: Vite + TypeScript (from the brief). Framework delegated to the build — chosen at the start of development. Hosting: GitHub Pages at `https://alexandrbaryshov.github.io/diva_nails/`, published only on the owner's word.
 
 ## Users
 

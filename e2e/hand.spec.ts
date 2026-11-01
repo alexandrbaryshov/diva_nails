@@ -13,7 +13,7 @@ test.describe("рука и ногти", () => {
   });
 
   test("HandView: рука грузится картинкой, пять ногтей — кнопки, тап выбирает ноготь", async ({ page }) => {
-    const handFile = page.waitForResponse((r) => r.url().endsWith("/diva-nails/hands/her-1.svg") && r.ok());
+    const handFile = page.waitForResponse((r) => r.url().endsWith("/diva_nails/hands/her-1.svg") && r.ok());
     await page.evaluate(() => {
       const k = (window as unknown as { __hand: Kit }).__hand;
       const el = document.getElementById("root")!;

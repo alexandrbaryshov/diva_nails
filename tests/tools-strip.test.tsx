@@ -9,7 +9,7 @@ import { createDesignStore, type DesignStore } from "../src/state/store";
 let s: DesignStore;
 afterEach(() => {
   cleanup();
-  history.replaceState(null, "", "/diva-nails/");
+  history.replaceState(null, "", "/diva_nails/");
 });
 
 function mount(initial = MONTH_PRESET.design) {
@@ -110,7 +110,7 @@ describe("лента на мужской руке", () => {
 
 describe("режим автора", () => {
   it("с ?author=1 — «Экспорт дизайна в JSON» копирует запись формата designs.json", async () => {
-    history.replaceState(null, "", "/diva-nails/?author=1");
+    history.replaceState(null, "", "/diva_nails/?author=1");
     const writeText = vi.fn(async () => {});
     Object.defineProperty(navigator, "clipboard", { value: { writeText }, configurable: true });
     mount();
