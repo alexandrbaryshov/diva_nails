@@ -3,9 +3,18 @@ import { readFileSync, mkdtempSync, mkdirSync, writeFileSync, existsSync, symlin
 import { tmpdir } from "node:os";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 // @ts-expect-error — .mjs без типов
 import { isPublic, exportPublic } from "../scripts/export-public.mjs";
+
+beforeEach(() => {
+  // Export creates a separate repository: source-local Git identity is not inherited.
+  vi.stubEnv("GIT_AUTHOR_NAME", "Test");
+  vi.stubEnv("GIT_AUTHOR_EMAIL", "test@example.invalid");
+  vi.stubEnv("GIT_COMMITTER_NAME", "Test");
+  vi.stubEnv("GIT_COMMITTER_EMAIL", "test@example.invalid");
+});
+afterEach(() => vi.unstubAllEnvs());
 
 function fixture() {
   const root = mkdtempSync(join(tmpdir(), "diva-export-test-"));
