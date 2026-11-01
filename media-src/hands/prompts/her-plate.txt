@@ -1,0 +1,11 @@
+Use the provided images as the approved visual reference and recreate the hand as a clean production illustration plate. Image 1 is the hand to redraw (pose, style, line work); image 2 shows its exact placement and scale in the approved layout.
+
+Subject: one adult woman's hand, exactly the hand in the reference, in the same pose: fingers softly curled toward the viewer, thumb raised on the left, the four fingertips stepping down to the right so every nail faces the viewer, wrist running straight down to the bottom edge of the frame.
+
+Style: the same stylish flat vector illustration as the reference, not a photo and not 3D. Filled warm skin (#EBC8B3 light warm beige) with soft cel shading in one slightly darker tone (#CB9987), a clean continuous dark-brown outline (#3B2A26) of even medium weight, a few thin interior crease lines on the knuckles and palm exactly like the reference. Same line weight and shading as the reference.
+
+Nails: BARE NATURAL NAIL BEDS, no polish, no colour, no gloss highlights, no long nails, no extensions. Each nail is a short natural nail trimmed level with the fingertip, drawn only as a soft pale-pink rounded shape (#F0D5CF) with a thin outline, clearly sitting on each of the five fingertips (thumb, index, middle, ring, little finger). Nothing on the nails.
+
+Background: one perfectly flat solid pure white background (#FFFFFF) everywhere around the hand, edge to edge, no gradient, no paper texture, no vignette, no rectangle or panel behind the hand, no cast shadow on the background, no floor.
+
+Remove every piece of text, label, caption, arrow, button, card and interface element. Do not add rings, jewellery, sleeves, bracelets or any other object. Keep the hand complete and fully inside the frame with a clear margin on the top, left and right; only the wrist may touch the bottom edge. Preserve the reference's composition, perspective and proportions. Portrait 4:5 frame.

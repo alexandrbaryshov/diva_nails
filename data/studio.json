@@ -1,0 +1,39 @@
+{
+  "name": "Diva Nails",
+  "kind": "ногтевая студия, салон красоты",
+  "city": "Чебоксары",
+  "address": "проспект Ленина, 7, корп. 1",
+  "phone": {
+    "display": "+7 952 759-06-59",
+    "href": "tel:+79527590659"
+  },
+  "phone2": null,
+  "telegram": {
+    "username": "divanail21",
+    "url": "https://t.me/divanail21"
+  },
+  "whatsapp": "https://wa.me/79527590659",
+  "vk": "https://vk.ru/diva_nail21",
+  "rating": {
+    "value": 5,
+    "count": 162,
+    "url": "https://yandex.ru/maps/?text=Diva%20Nails%2C%20%D0%A7%D0%B5%D0%B1%D0%BE%D0%BA%D1%81%D0%B0%D1%80%D1%8B%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2C%207%2C%20%D0%BA%D0%BE%D1%80%D0%BF.%201"
+  },
+  "amenities": [
+    "card",
+    "wifi"
+  ],
+  "legal": {
+    "form": "ИП",
+    "inn": "213006606123",
+    "ogrnip": "315213000010059",
+    "fullName": null
+  },
+  "hours": null,
+  "entrance": null,
+  "since": null,
+  "yclientsUrl": "https://n295040.yclients.com/company/285468/record-type?o=",
+  "metrikaId": null,
+  "logo": null,
+  "siteUrl": "https://alexandrbaryshov.github.io/diva-nails/"
+}

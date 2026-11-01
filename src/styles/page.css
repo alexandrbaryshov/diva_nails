@@ -1,0 +1,9 @@
+/* Стили простых страниц (privacy/) без приложения. */
+@import "./tokens.css";
+@import "./base.css";
+
+.doc {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 32px var(--gutter) 64px;
+}

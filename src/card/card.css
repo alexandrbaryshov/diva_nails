@@ -1,0 +1,176 @@
+/* Лист после «Сохранить»: сливочная панель на молоке, главная кнопка — тёмная карамель с белой подписью. */
+.sv {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgb(59 42 38 / 0.45);
+  font-family: var(--font-text);
+  color: var(--c-ink);
+}
+
+.sv-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(480px, 100%);
+  max-height: 96dvh;
+  overflow-y: auto;
+  padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
+  border-radius: 24px 24px 0 0;
+  background: var(--c-cream);
+  box-shadow: 0 -12px 40px -12px rgb(59 42 38 / 0.35);
+}
+
+@media (min-width: 900px) {
+  .sv {
+    align-items: center;
+  }
+  .sv-panel {
+    border-radius: 24px;
+    padding-bottom: 20px;
+  }
+}
+
+.sv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sv-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.sv-close {
+  display: inline-grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  margin-right: -10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--c-ink);
+  cursor: pointer;
+}
+
+.sv-card {
+  align-self: center;
+  width: auto;
+  height: min(44dvh, 420px);
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  background: var(--c-milk);
+  box-shadow: 0 2px 6px rgb(59 42 38 / 0.08), -8px 16px 32px -10px rgb(122 100 92 / 0.35);
+}
+
+.sv-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sv-actions .sv-btn:first-child {
+  grid-column: 1 / -1;
+}
+
+.sv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 14px;
+  border: 1px solid rgb(201 164 142 / 0.7);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--c-ink);
+  font: inherit;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sv-btn:hover {
+  background: rgb(231 207 196 / 0.4);
+}
+
+.sv-btn--main {
+  border-color: #9e6542;
+  background: #9e6542;
+  color: #fff;
+}
+
+.sv-btn--main:hover {
+  background: #8d5a3a;
+}
+
+.sv-btn:focus-visible,
+.sv-close:focus-visible {
+  outline: 2px solid var(--c-ink);
+  outline-offset: 2px;
+}
+
+.sv-sep {
+  color: var(--c-cocoa);
+  margin: 0 4px;
+}
+
+.sv-link {
+  min-height: var(--tap);
+  padding: 0 12px;
+  border: 1px solid var(--c-caramel);
+  border-radius: 12px;
+  background: var(--c-milk);
+  color: var(--c-ink);
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.sv-status {
+  margin: 0;
+  color: var(--c-cocoa);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.sv-status:empty {
+  display: none;
+}
+
+.sv-full {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  background: var(--c-milk);
+}
+
+.sv-full img {
+  flex: 1;
+  min-height: 0;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.sv-hold {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+.sv-full .sv-btn {
+  width: min(320px, 100%);
+}

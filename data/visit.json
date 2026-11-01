@@ -1,0 +1,15 @@
+{
+  "steps": [
+    { "id": "booking", "title": "Запись", "facts": [], "pending": [], "media": "visit-01" },
+    { "id": "welcome", "title": "Встречаем", "facts": ["Wi-Fi", "Оплата картой"], "pending": ["чай и кофе"], "media": "visit-02" },
+    { "id": "brief", "title": "Смотрим твою карточку и обсуждаем", "facts": [], "pending": [], "media": "visit-03" },
+    { "id": "tools", "title": "Стерильные инструменты", "facts": [], "pending": ["крафт-пакет"], "media": "visit-04" },
+    { "id": "work", "title": "Работа", "facts": [], "pending": [], "media": "visit-05" },
+    { "id": "care", "title": "Советы по уходу", "facts": [], "pending": [], "media": "visit-06" }
+  ],
+  "masters": [
+    { "name": "Алевтина", "about": null, "photo": null },
+    { "name": "Диана", "about": "подология, консультации, уход за стопами", "photo": null },
+    { "name": "Елизавета", "about": "«топ-мастер» — так пишут в отзывах", "photo": null }
+  ]
+}

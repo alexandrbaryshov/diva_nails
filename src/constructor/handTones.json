@@ -1,0 +1,9 @@
+{
+  "comment": "Цвета ролей руки по тонам кожи 0..3. Тон 1 — рука утверждённого макета. Читают scripts/hands/build.mjs (SVG-файлы тонов) и hands.ts (точки выбора тона).",
+  "tones": [
+    { "skin": "#f6d3c4", "light": "#fbe3d8", "shade": "#e0ad9d", "crease": "#d09b8a", "outline": "#452a26" },
+    { "skin": "#edc1af", "light": "#f3d2c4", "shade": "#cb9885", "crease": "#bf8b78", "outline": "#452a26" },
+    { "skin": "#c99178", "light": "#d8a78f", "shade": "#a8705c", "crease": "#985f4c", "outline": "#3b2420" },
+    { "skin": "#7d523f", "light": "#93664f", "shade": "#613c2e", "crease": "#4f2f23", "outline": "#24150f" }
+  ]
+}

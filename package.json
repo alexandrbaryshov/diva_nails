@@ -1,0 +1,43 @@
+{
+  "name": "diva-nails",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Сайт ногтевой студии Diva Nails (Чебоксары) с конструктором маникюра",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "budget": "node scripts/budget.mjs",
+    "check": "tsc --noEmit && eslint . && vitest run && vite build && node scripts/budget.mjs",
+    "e2e": "node scripts/e2e.mjs",
+    "media": "node scripts/media.mjs",
+    "shoot": "node scripts/shoot.mjs"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.3",
+    "preact": "^10.29.8",
+    "uqr": "^0.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "1.52.0",
+    "@preact/preset-vite": "^2.10.6",
+    "@testing-library/preact": "^3.2.6",
+    "@types/node": "^24.19.2",
+    "eslint": "^9.39.5",
+    "globals": "^17.13.0",
+    "jsdom": "^30.1.3",
+    "playwright": "1.52.0",
+    "preact-render-to-string": "^6.8.1",
+    "sharp": "^0.35.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^7.3.7",
+    "vitest": "^5.0.5"
+  }
+}

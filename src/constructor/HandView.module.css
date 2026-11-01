@@ -1,0 +1,77 @@
+.hand {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nail {
+  outline: none;
+}
+
+.interactive .nail {
+  cursor: pointer;
+}
+
+/* невидимая зона касания вокруг ногтя: шире самого ногтя, чтобы попадать пальцем */
+.hit {
+  fill: transparent;
+  stroke: transparent;
+  pointer-events: all;
+}
+
+.selected {
+  fill: none;
+  stroke: var(--c-caramel, #c9a48e);
+  pointer-events: none;
+}
+
+.focus {
+  fill: none;
+  stroke: var(--c-ink, #3b2a26);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nail:focus-visible .focus {
+  opacity: 0.8;
+}
+
+.outline {
+  fill: none;
+  pointer-events: none;
+}
+
+/* ── переливы: хром и кошачий глаз — полоса света плывёт по ногтю или идёт за наклоном телефона (--dn-tilt от −1 до 1) ── */
+
+.glint {
+  pointer-events: none;
+}
+
+.glintBand {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: glint 5.5s ease-in-out infinite alternate;
+}
+
+:global(html[data-tilt]) .glintBand {
+  animation: none;
+  transform: translateX(calc(var(--dn-tilt, 0) * 22%));
+  transition: transform 90ms linear;
+}
+
+@keyframes glint {
+  from {
+    transform: translateX(-22%);
+  }
+  to {
+    transform: translateX(22%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glint {
+    display: none;
+  }
+}

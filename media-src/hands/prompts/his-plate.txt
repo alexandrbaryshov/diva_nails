@@ -1,0 +1,13 @@
+Edit this illustration: turn the woman's hand into an adult man's hand while keeping the same flat vector style, colours, outline weight, pose, framing and white background.
+
+Required changes to the anatomy, all clearly visible:
+- the palm about 15 percent wider and squarer, with a straight, angular outer edge on the right instead of a soft curve;
+- every finger about 20 percent thicker and wider, with blunt, squared fingertips;
+- larger, more angular knuckles with a visible bump on each finger joint outline;
+- a thicker, sturdier thumb that is shorter, with a broad square tip;
+- the wrist about 25 percent wider, with straight parallel sides running down to the bottom edge;
+- the outline slightly heavier and more angular overall, fewer elegant curves.
+
+Nails: bare natural nail beds only, no polish, no colour, no gloss. Short, wide nails cut straight and level with the fingertip, drawn as soft pale-pink (#F0D5CF) rounded-square shapes with a thin outline, one on each of the five fingertips.
+
+Keep: filled warm skin (#EBC8B3) with soft cel shading in #CB9987, the clean dark-brown outline (#3B2A26), a few thin crease lines, flat pure white (#FFFFFF) background edge to edge, no cast shadow, no text, no objects, no jewellery, no watch, no sleeve. The hand stays fully inside the frame with a margin on the top, left and right; only the wrist touches the bottom edge. Portrait 4:5 frame.

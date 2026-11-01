@@ -1,0 +1,32 @@
+/* Токены «молочного нюда». Цвет интерфейса — только эта палитра брифа;
+   насыщенный цвет живёт на ногтях, в оттенках палитры и на фото. */
+:root {
+  --c-milk: #f6f0ea;    /* фон */
+  --c-cream: #fbf8f4;   /* поверхности, карточки */
+  --c-powder: #e7cfc4;  /* акцент 1, пудрово-розовый */
+  --c-caramel: #c9a48e; /* акцент 2, карамель */
+  --c-ink: #3b2a26;     /* текст */
+  --c-cocoa: #7a645c;   /* вторичный текст */
+  /* Тёмная карамель главных таблеток «Записаться» и «Сохранить» — как в макете, с белой подписью
+     (решение пользователя на ревью первого экрана: контраст белого ≥ 4.5:1, здесь 4.8:1). */
+  --c-caramel-deep: #9e6542;
+  --c-caramel-deep-hover: #8c5636;
+  --c-on-caramel-deep: #ffffff;
+
+  --bg: var(--c-milk);
+  --surface: var(--c-cream);
+  --accent: var(--c-caramel);
+  --accent-soft: var(--c-powder);
+  --text: var(--c-ink);
+  --text-2: var(--c-cocoa);
+
+  /* Шрифты подбирает этап дизайна (таск 02); до тех пор — системные. */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-text: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --tap: 44px;          /* минимальный размер кнопки */
+  --radius-s: 8px;
+  --radius-m: 16px;
+  --radius-pill: 999px;
+  --gutter: 16px;
+}

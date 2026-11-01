@@ -1,0 +1,142 @@
+/* Шапка: липкая и компактная. Надпись «Diva Nails» слева, тёмно-карамельная таблетка «Записаться» справа,
+   на компьютере между ними — меню-якоря. Боксы — из замера макета (.impeccable/build/scaffold/layout.css). */
+:root {
+  --header-h: 66px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: var(--header-h);
+  background: var(--bg);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 11px 20px 0 22.3px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--c-ink);
+  font-family: var(--font-wordmark);
+  font-size: 28.2px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.012em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: none;
+}
+
+.book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap);
+  height: var(--tap);
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--c-ink);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* видимая таблетка ниже кнопки: по макету 34 px, нажимается вся кнопка 44 px */
+.book-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  background: var(--c-caramel-deep);
+  color: var(--c-on-caramel-deep);
+  font-family: var(--font-text);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  transition: background-color 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.book-btn:hover .book-pill,
+.book-btn[aria-expanded="true"] .book-pill {
+  background: var(--c-caramel-deep-hover);
+}
+
+.book-btn:focus-visible {
+  outline: none;
+}
+
+.book-btn:focus-visible .book-pill {
+  outline: 2px solid var(--c-ink);
+  outline-offset: 2px;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --header-h: 72px;
+  }
+
+  .site-header-inner {
+    padding: 0 40px;
+    gap: 24px;
+  }
+
+  .brand {
+    font-size: 32px;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+  }
+
+  .site-nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding: 0 12px;
+    border-radius: var(--radius-pill);
+    color: var(--c-ink);
+    font-size: 15px;
+    text-decoration: none;
+    transition: background-color 160ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .site-nav-link:hover {
+    background: rgb(231 207 196 / 0.45);
+  }
+
+  .book-btn {
+    margin-left: 8px;
+  }
+
+  .book-pill {
+    width: 132px;
+    height: 40px;
+    font-size: 15px;
+  }
+}

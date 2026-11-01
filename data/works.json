@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": "real-work-1",
+      "media": "real-work-1",
+      "alt": "Белый маникюр на фоне роз",
+      "stub": false
+    },
+    {
+      "id": "real-work-2",
+      "media": "real-work-2",
+      "alt": "Оранжевый маникюр с рисунком",
+      "stub": false
+    },
+    {
+      "id": "real-work-3",
+      "media": "real-work-3",
+      "alt": "Молочный маникюр",
+      "stub": false
+    },
+    {
+      "id": "real-work-4",
+      "media": "real-work-4",
+      "alt": "Жёлтый маникюр с узорами",
+      "stub": false
+    },
+    {
+      "id": "real-work-5",
+      "media": "real-work-5",
+      "alt": "Тёмный сливовый маникюр",
+      "stub": false
+    },
+    {
+      "id": "real-work-6",
+      "media": "real-work-6",
+      "alt": "Нюдовый маникюр с цветком в руке",
+      "stub": false
+    },
+    {
+      "id": "real-work-7",
+      "media": "real-work-7",
+      "alt": "Педикюр с контрастным дизайном",
+      "stub": false
+    },
+    {
+      "id": "real-work-8",
+      "media": "real-work-8",
+      "alt": "Светлый маникюр с рисунком ветвей",
+      "stub": false
+    },
+    {
+      "id": "real-work-9",
+      "media": "real-work-9",
+      "alt": "Светлый маникюр на длинных ногтях",
+      "stub": false
+    },
+    {
+      "id": "real-work-10",
+      "media": "real-work-10",
+      "alt": "Тёмный маникюр",
+      "stub": false
+    }
+  ]
+}
