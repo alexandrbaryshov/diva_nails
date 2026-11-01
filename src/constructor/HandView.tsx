@@ -1,7 +1,7 @@
 // Рука конструктора: SVG-иллюстрация руки (<image href>, не инлайн-пути) и поверх — пять ногтей-контуров.
 import type { JSX } from "preact";
 import { Fragment } from "preact";
-import { useId } from "preact/hooks";
+import { useEffect, useState, useId } from "preact/hooks";
 import { shadeById, shadeLabel } from "../data/palette";
 import type { Design, Print } from "../state/design";
 import { nailPath } from "./geometry";
@@ -145,9 +145,25 @@ export function HandGraphic(props: GraphicProps) {
 export function HandView(props: HandViewProps): JSX.Element {
   const uid = "h" + useId().replace(/[^A-Za-z0-9_-]/g, "_");
   const art = HANDS[props.design.hand];
+  const href = art.tones[props.design.tone];
+  const [decoded, setDecoded] = useState('');
+  useEffect(() => {
+    let active = true;
+    const image = new Image();
+    image.src = href;
+    if (typeof image.decode !== 'function') return;
+    void image.decode().then(() => {
+      if (active) setDecoded(href);
+      const next = new Image();
+      next.src = HANDS[props.design.hand === 'her' ? 'his' : 'her'].tones[props.design.tone];
+      void next.decode().catch(() => {});
+    }).catch(() => {});
+    return () => { active = false; };
+  }, [href, props.design.hand, props.design.tone]);
   return (
     <svg
       class={[css.hand, props.interactive ? css.interactive : ""].filter(Boolean).join(" ")}
+      style={{ opacity: decoded === href ? 1 : 0 }}
       viewBox={art.viewBox.join(" ")}
       role={props.interactive ? "group" : "img"}
       aria-label={props.interactive ? "Рука: нажми на ноготь, чтобы выбрать" : "Рука с дизайном маникюра"}
@@ -156,3 +172,5 @@ export function HandView(props: HandViewProps): JSX.Element {
     </svg>
   );
 }
+
+

@@ -195,7 +195,7 @@
   height: var(--hand-h);
   display: flex;
   justify-content: center;
-  transition: height 320ms cubic-bezier(0.22, 1, 0.36, 1);
+
 }
 
 .dn-hand {

@@ -86,7 +86,7 @@
 }
 
 .dn-stage[data-lamp] .dn-hands {
-  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1), height 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .dn-stage[data-lamp="in"] .dn-lamp-body,
